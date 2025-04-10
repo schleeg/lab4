@@ -4,6 +4,10 @@ import edu.canisius.cyb600.lab4.dataobjects.Actor;
 import edu.canisius.cyb600.lab4.dataobjects.Film;
 
 import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.ArrayList;
 import java.util.List;
 
 public abstract class AbstractDBAdapter {
@@ -23,4 +27,10 @@ public abstract class AbstractDBAdapter {
 
     //JOIN
     public abstract List<Film> getFilmsForActor(Actor actor);
+
+    public abstract List<Actor> getAllActors();
+
+    public abstract List<Actor> getAllActorsWithLastNameWithCode(String lastName);
 }
+
+
